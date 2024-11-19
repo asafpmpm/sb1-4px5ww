@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-gray-900 to-gray-800 text-white min-h-screen;
+  }
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Add curved line styling */
+.curved-line {
+  height: 2px;
+  background: linear-gradient(90deg, 
+    rgba(59, 130, 246, 0.5), 
+    rgba(168, 85, 247, 0.5),
+    rgba(34, 197, 94, 0.5),
+    rgba(234, 179, 8, 0.5),
+    rgba(239, 68, 68, 0.5),
+    rgba(99, 102, 241, 0.5)
+  );
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'%3E%3Cpath d='M0,50 Q25,0 50,50 T100,50' stroke='white' fill='none' stroke-width='2' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") 0 0/100% 100%;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'%3E%3Cpath d='M0,50 Q25,0 50,50 T100,50' stroke='white' fill='none' stroke-width='2' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") 0 0/100% 100%;
+}
